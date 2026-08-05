@@ -1,0 +1,40 @@
+.page-modal{
+    position:fixed;
+    inset:0;
+    z-index:99999;
+}
+
+.page-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.55);
+    backdrop-filter:blur(5px);
+}
+
+.page-sheet{
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:700px;
+    height:900px;
+
+    background:#f8f1dc;
+
+    border-radius:12px;
+
+    padding:30px;
+
+    overflow:auto;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.45);
+}
+
+.page-back{
+    position:absolute;
+    top:20px;
+    left:20px;
+}
