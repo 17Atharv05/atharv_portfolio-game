@@ -18,7 +18,7 @@ export default function CameraController({
   const pitch = useRef(0.35);
 
   // Camera distance (zoom)
-  const distance = useRef(15);
+  const distance = useRef(35);
 
   // Mouse state
   const dragging = useRef(false);

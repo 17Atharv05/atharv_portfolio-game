@@ -1,5 +1,6 @@
 import { Sky } from "three/examples/jsm/objects/Sky.js";
 import { useFrame, useThree } from "@react-three/fiber";
+import { Html } from "@react-three/drei";
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { Water } from "three/examples/jsm/objects/Water.js";
@@ -138,8 +139,8 @@ if (skyRef.current) {
   const islandDestinations = {
 
     Home: {
-  camera: new THREE.Vector3(0, 25, 35),
-  lookAt: new THREE.Vector3(0, 8, 0),
+  camera: new THREE.Vector3(0, 38, 55),
+  lookAt: new THREE.Vector3(0, 12, 0),
 },
 
   About: {
@@ -199,6 +200,25 @@ if (skyRef.current) {
 
       {/* ISLAND */}
       <HomeIsland />
+     <Html
+  position={[0, 23, 0]}
+  center
+  transform
+  distanceFactor={15}
+  zIndexRange={[100, 0]}
+>
+  <div className="portfolio-status">
+    <div className="status-title">
+      Portfolio Under Development
+    </div>
+
+    <div className="status-text">
+      This portfolio is still being worked on.
+      <br />
+      To explore, click on the boards around the island.
+    </div>
+  </div>
+</Html>
       
      <CameraController
   target={characterRef}
