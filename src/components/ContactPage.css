@@ -1,0 +1,64 @@
+
+.contact-page {
+  position: relative;
+  height: 90vh;
+  width: auto;
+  max-width: 90vw;
+
+  display: inline-block;
+}
+
+.contact-page-image {
+  height: 90vh;
+  width: auto;
+  max-width: 90vw;
+
+  display: block;
+  object-fit: contain;
+}
+
+.contact-link {
+  position: absolute;
+
+  display: block;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  z-index: 10;
+}
+
+/* Email: x 386–747, y 421–467 */
+.contact-email {
+  left: 37.7%;
+  top: 29.1%;
+  width: 35.3%;
+  height: 3.2%;
+}
+
+/* LinkedIn: x 386–634, y 527–561 */
+.contact-linkedin {
+  left: 37.7%;
+  top: 36.4%;
+  width: 24.2%;
+  height: 2.4%;
+}
+
+/* GitHub: x 386–529, y 628–654 */
+.contact-github {
+  left: 37.7%;
+  top: 43.4%;
+  width: 14%;
+  height: 1.8%;
+}
+
+/* Resume */
+/* Position will be adjusted once we confirm its exact coordinates */
+.contact-resume {
+  left: 35%;
+  top: 52%;
+  width: 30%;
+  height: 4%;
+}
+

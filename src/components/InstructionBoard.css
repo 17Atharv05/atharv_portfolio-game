@@ -1,0 +1,48 @@
+.instruction-board {
+  width: 380px;
+  padding: 28px 30px;
+
+  background: rgba(17, 24, 39, 0.94);
+  color: white;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 14px;
+
+  font-family: Arial, sans-serif;
+
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
+
+  user-select: none;
+}
+
+.instruction-title {
+  text-align: center;
+
+  margin-bottom: 16px;
+
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.instruction-item {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+
+  margin-top: 12px;
+
+  font-size: 17px;
+}
+
+.instruction-item strong {
+  font-size: 17px;
+}
+
+.instruction-item span {
+  margin-left: 24px;
+
+  font-size: 11px;
+  opacity: 0.7;
+}

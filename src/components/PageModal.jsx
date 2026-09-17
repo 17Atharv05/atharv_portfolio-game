@@ -11,21 +11,24 @@ export default function PageModal({
   return createPortal(
     <div className="page-modal">
 
-      <div
-        className="page-overlay"
-        onClick={onClose}
-      />
+      <div className="page-overlay" />
 
-      <div className="page-sheet">
+      <div className="page-layout">
 
-        <button
-          className="page-back"
-          onClick={onClose}
-        >
-          ← Back
-        </button>
+        <div className="page-sheet">
 
-        {children}
+          <div className="page-content">
+            {children}
+          </div>
+
+          <button
+            className="page-back"
+            onClick={onClose}
+          >
+            ← Back
+          </button>
+
+        </div>
 
       </div>
 

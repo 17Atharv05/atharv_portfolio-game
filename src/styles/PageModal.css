@@ -1,40 +1,157 @@
-.page-modal{
-    position:fixed;
-    inset:0;
-    z-index:99999;
+
+.page-layout {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  height: 94vh;
 }
 
-.page-overlay{
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,.55);
-    backdrop-filter:blur(5px);
+.resume-side-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 14px 18px;
+
+  min-width: 170px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+
+  background: rgba(17, 24, 39, 0.95);
+  color: white;
+
+  cursor: pointer;
+
+  font-family: Arial, sans-serif;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
 }
 
-.page-sheet{
-    position:absolute;
-
-    left:50%;
-    top:50%;
-
-    transform:translate(-50%,-50%);
-
-    width:700px;
-    height:900px;
-
-    background:#f8f1dc;
-
-    border-radius:12px;
-
-    padding:30px;
-
-    overflow:auto;
-
-    box-shadow:0 20px 60px rgba(0,0,0,.45);
+.resume-side-button:hover {
+  transform: scale(1.05);
+  background: rgba(37, 99, 235, 0.95);
 }
 
-.page-back{
-    position:absolute;
-    top:20px;
-    left:20px;
+.resume-side-icon {
+  font-size: 26px;
+}
+
+.resume-side-button strong {
+  display: block;
+
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+.resume-side-button small {
+  display: block;
+
+  margin-top: 3px;
+
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+
+.page-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+}
+
+.page-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(5px);
+}
+
+.page-sheet {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  height: 94vh;
+  width: auto;
+  max-width: 90vw;
+
+  background: transparent;
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  overflow: visible;
+}
+
+.page-content {
+  height: 90vh;
+  width: auto;
+  max-width: 90vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 12px;
+  overflow: hidden;
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+.portfolio-page-image {
+  height: 90vh;
+  width: auto;
+  max-width: 90vw;
+  object-fit: contain;
+  display: block;
+}
+
+.page-back {
+  margin-top: 10px;
+
+  padding: 8px 16px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: white;
+  color: #111827;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.page-back:hover {
+  background: #f3f4f6;
+}
+
+.portfolio-pdf {
+  height: 90vh;
+  width: min(90vw, 700px);
+
+  border: none;
+  border-radius: 12px;
+
+  display: block;
+
+  background: white;
 }

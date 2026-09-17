@@ -1,0 +1,55 @@
+
+.resume-board {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 14px 22px;
+
+  min-width: 180px;
+
+  background: rgba(17, 24, 39, 0.94);
+  color: white;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+
+  font-family: Arial, sans-serif;
+
+  cursor: pointer;
+  user-select: none;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.4);
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.resume-board:hover {
+  transform: scale(1.06);
+
+  background: rgba(37, 99, 235, 0.95);
+}
+
+.resume-board-icon {
+  font-size: 27px;
+}
+
+.resume-board-title {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  white-space: nowrap;
+}
+
+.resume-board-subtitle {
+  margin-top: 3px;
+
+  font-size: 12px;
+  opacity: 0.7;
+
+  white-space: nowrap;
+}
+
