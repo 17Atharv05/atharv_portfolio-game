@@ -102,7 +102,7 @@ export default function CharacterController({
 
       activeCharacterRef.current.lookAt(destination);
 
-      position.lerp(destination, 0.02);
+      position.lerp(destination, 0.035);
     } else {
       if (animation !== "Idle") {
         setAnimation("Idle");

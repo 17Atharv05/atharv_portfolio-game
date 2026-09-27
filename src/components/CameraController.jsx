@@ -133,7 +133,7 @@ if (mode === "dropTransition") {
 }
 // ---------- ISLAND TRANSITION ----------
 if (mode === "transition" && destination) {
-  camera.position.lerp(destination.camera, 0.03);
+  camera.position.lerp(destination.camera, 0.05);
 
   camera.lookAt(destination.lookAt);
 

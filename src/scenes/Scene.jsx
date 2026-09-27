@@ -57,11 +57,11 @@ export default function Scene({
     140,
   ]);
 
-  const [showCharacter, setShowCharacter] = useState(true);
+  const [showCharacter, setShowCharacter] = useState(false);
   const [isFalling, setIsFalling] = useState(false);
   const [parachuteOpen, setParachuteOpen] = useState(false);
 
-  const [cameraMode, setCameraMode] = useState("free");
+  const [cameraMode, setCameraMode] = useState("plane");
 
   const sunRef = useRef(
     new THREE.Vector3(10, 20, -10)
@@ -616,6 +616,24 @@ const openResume = () => {
           />
         )}
 
+        {currentIsland === "About" &&
+  !selectedPage && (
+    <Signboard
+      text="📁 Projects"
+      position={[-138, 18, -1]}
+      walkTarget={[-138, 18, -1]}
+      onClick={(position) => {
+        if (isTransitioning)
+          return;
+
+        setTarget(position);
+        setSelectedIsland(
+          "Projects"
+        );
+      }}
+    />
+  )}
+
       {/* EXPERIENCE → HOME */}
 
       {currentIsland ===
@@ -646,6 +664,26 @@ const openResume = () => {
           />
         )}
 
+        {currentIsland ===
+  "Experience" &&
+  !selectedPage && (
+    <Signboard
+      text="📞 Contact"
+      position={[177, 6, -8]}
+      rotation={[0, Math.PI / 2, 0]}
+      walkTarget={[177, 5.2, -5]}
+      onClick={(position) => {
+        if (isTransitioning)
+          return;
+
+        setTarget(position);
+        setSelectedIsland(
+          "Contact"
+        );
+      }}
+    />
+  )}
+
       {/* PROJECTS → HOME */}
 
       {currentIsland ===
@@ -675,6 +713,25 @@ const openResume = () => {
           />
         )}
 
+        {currentIsland ===
+  "Projects" &&
+  !selectedPage && (
+    <Signboard
+      text="💼 Experience"
+      position={[10, 2.5, -127]}
+      walkTarget={[10, 2.5, -127]}
+      onClick={(position) => {
+        if (isTransitioning)
+          return;
+
+        setTarget(position);
+        setSelectedIsland(
+          "Experience"
+        );
+      }}
+    />
+  )}
+
       {/* CONTACT → HOME */}
 
       {currentIsland ===
@@ -682,11 +739,7 @@ const openResume = () => {
         !selectedPage && (
           <Signboard
             text="🏠 Home"
-            position={[
-              -1,
-              -1,
-              130,
-            ]}
+            position={[-1,-1,130,]}
             rotation={[
               0,
               Math.PI,
@@ -709,6 +762,8 @@ const openResume = () => {
           />
         )}
 
+        
+
         {currentIsland === "About" && !selectedPage && (
   <PageBoard
     position={[-150, 32, 0]}
@@ -716,6 +771,7 @@ const openResume = () => {
     onClick={openCurrentPage}
   />
 )}
+
 
 {currentIsland === "Projects" && !selectedPage && (
   <PageBoard
@@ -758,34 +814,31 @@ const openResume = () => {
 )}
 
 
-      {/* PLANE - CURRENTLY DISABLED */}
+     {/* PLANE */}
 
-      {/*
-      <Plane
-        planeRef={planeRef}
-        position={planePosition}
-        onDrop={(planePosition) => {
-          console.log("DROP CALLED");
+<Plane
+  planeRef={planeRef}
+  position={planePosition}
+  onDrop={(planePosition) => {
+    console.log("DROP CALLED");
 
-          setCharacterPosition([
-            -3,
-            planePosition.y - 2,
-            0,
-          ]);
+    setCharacterPosition([
+      -3,
+      planePosition.y - 2,
+      0,
+    ]);
 
-          setShowCharacter(true);
-          setIsFalling(true);
+    setShowCharacter(true);
+    setIsFalling(true);
 
-          setCameraMode(
-            "dropTransition"
-          );
+    setCameraMode("dropTransition");
 
-          setTimeout(() => {
-            setParachuteOpen(true);
-          }, 1000);
-        }}
-      />
-      */}
+    setTimeout(() => {
+      setParachuteOpen(true);
+    }, 1000);
+  }}
+/>
+     
     </>
   );
 }
